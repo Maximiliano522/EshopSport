@@ -19,7 +19,7 @@
 
     if(password_verify($contrasena_login, $resultado['contrasena'])){
         $_SESSION['admin'] = $usuario_login;
-        header('Location: /indexLogin.html');
+        header('Location: /indexLogin.php');
     }else{
         echo 'Contraseña Incorrecta';
         header('Location: registro.php');

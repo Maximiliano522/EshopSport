@@ -52,3 +52,15 @@ nxtBtn.addEventListener('click', () => {
     backdropImg.src= productData[currentProduct].image;
     productImg.src= productData[currentProduct].image;
 })
+
+const productButton = document.querySelector(".productButton2")
+const payment = document.querySelector(".payment2")
+const close = document.querySelector(".close")
+
+productButton.addEventListener("click", () =>{
+    payment.style.display = "flex"
+})
+
+close.addEventListener("click", () => {
+    payment.style.display = "none"
+})

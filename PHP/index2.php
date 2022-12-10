@@ -13,8 +13,6 @@
     $query = mysqli_query($conn, $sql);
     //echo $query;
 
-    $resultado = $gsent->fetchAll();
-
 ?>
 
 <!DOCTYPE html>

@@ -10,13 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Serif:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/styleMujeres.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+
 </head>
 <body>
     <div class="overlay"></div>
     <div class="left-side">
         <div class="hogar">
             <button class="casa-btn">
-                <a href="index.html" class = "casa">
+                <a href="index.php" class = "casa">
                     <img class="casa-btn.img" src="./img/Casa.png">
                 </a>
             </button>
@@ -44,10 +46,33 @@
                 <p class="product-des">
                     Los grandes diseñadores de moda de Nueva York, París y Milán, traen lo nuevo a la industria de la ropa, con sus colecciones de colores vibrantes, outfits monocromáticos, y estampados.
                 </p>
-                <a href="#" class="buy-btn">Buy Now</a>
+                <button class="productButton2">BUY NOW!!!</button>
                 <button class="nxt-btn">
+                    
                     <img src="./img/arrow.png" alt="" class="nxt-btn-img">
                 </button>
+            </div>
+            <div class="payment2">
+                <h1 class="payTitle">Personal Information</h1>
+                <label>Name and Surname</label>
+                <input type="text" placeholder="John Doe" class="payInput">
+                <label>Phone Number</label>
+                <input type="text" placeholder="+1 234 5678" class="payInput">
+                <label>Address</label>
+                <input type="text" placeholder="Elton St 21 22-145" class="payInput">
+                <h1 class="payTitle">Card Information</h1>
+                <div class="cardIcons">
+                    <img src="./img/visa.png" alt="" class="cardIcon">
+                    <img src="./img/master.png" alt="" class="cardIcon">
+                </div>
+                <input type="password" class="payInput" name="" id="" placeholder="Card Number">
+                <div class="cardInfo">
+                    <input type="text" placeholder="mm" class="payInput sm">
+                    <input type="text" placeholder="yyyy" class="payInput sm">
+                    <input type="text" placeholder="cvv" class="payInput sm">
+                </div>
+                <button class="payButton">Cheackout!!!</button>
+                <span class="close">X</span>
             </div>
             <div class="product-img-container">
                 <img src="./img/img1.jpg" id="img1" alt="" class="product-img">
@@ -57,5 +82,6 @@
     
     
     <script src="./JS/appMujeres.js"></script>
+    <script src="./JS/app.js"></script>
 </body>
 </html>

@@ -8,7 +8,9 @@
 
     $conn = conectar();
     $sql = "SELECT * FROM usuarios";
+    $sql2 = "SELECT * FROM carrito";
     $query = mysqli_query($conn, $sql);
+    $query2 = mysqli_query($conn, $sql2);
     //echo $query;
 
 ?>
@@ -85,9 +87,6 @@
                             <tr>
                                 <th>Nombre (s)</th>
                                 <th></th>
-                                <th>
-                                    Acciones
-                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -99,11 +98,8 @@
                                         <?php echo $Usuario ?>
                                     </td>
                                     <td>
-                                        <?php echo $row['apellidos'] ?>
-                                    </td>
-                                    <td>
-                                        <a href="actualizar.php?id=<?php echo $row['cod_estudiante']?>" 
-                                            class="btn">Editar</a>
+                                        <a href="/PHP/actualizar.php?id=<?php echo $Usuario?>" 
+                                                    class="btn btn-danger">Editar</a>
                                     </td>
                                 </tr>
                             <?php
@@ -113,10 +109,41 @@
 
                     </div>
                         <div class="sliderItem">
-                            <?php echo $login_usuario ?>
-                                
-                            <a href="actualizar.php?id=<?php echo $row['cod_estudiante']?>" 
-                                            class="btn">Editar</a>
+                            <table class="table">
+                                <thead class="table-success table-striped">
+                                    <tr>
+                                        <th>Número</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>
+                                            Acciones
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        while($row=mysqli_fetch_array($query2)){
+                                    ?>
+                                        <tr>
+                                            <td>
+                                                <?php echo $row['idp'] ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $row['Name'] ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $row['Price'], '$' ?>
+                                            </td>
+                                            <td>
+                                                <a href="/PHP/delete.php?id=<?php echo $row['idp']?>" 
+                                                    class="btn btn-danger">Borrar</a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                        }
+                                    ?>
+                                </tbody>
+                    </table>
                         </div>
                     </div>
                 </div>

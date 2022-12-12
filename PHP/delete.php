@@ -2,10 +2,10 @@
 
     include("conexion.php");
     $conn = conectar();
-    $cod_estudiante = $_GET['id'];
-    $sql = "DELETE FROM alumnos WHERE cod_estudiante='$cod_estudiante'";
+    $id = $_GET['id'];
+    $sql = "DELETE FROM carrito WHERE idp='$id'";
     $query =mysqli_query($conn, $sql);
     if($query) {
-        Header("Location: index.php");
+        Header("Location: /indexLogin.php");
     } 
 ?>

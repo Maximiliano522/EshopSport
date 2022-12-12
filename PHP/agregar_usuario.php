@@ -1,5 +1,7 @@
 <?php
-
+    
+    session_start();
+    
     include_once 'conexionU.php';
 
     $usuario_nuevo = $_POST['nombre_usuario'];
@@ -29,6 +31,7 @@
             // Destruir las variables de conexion
             $sentencia_agregar = null;
             $pdo = null;
+            $_SESSION['admin'] = $usuario_nuevo;
             header('location: /indexLogin.php');
     
         }else{

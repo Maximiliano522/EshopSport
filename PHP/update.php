@@ -1,16 +1,20 @@
 <?php
 
-    include("conexion.php");
-    $conn = conectar();
-    $cod_estudiante = $_POST['cod_estudiante'];
-    $ine = $_POST['ine'];
-    $nombre = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
+    session_start();
 
-    $sql = "UPDATE alumnos SET ine='$ine', nombre='$nombre', apellidos='$apellidos' WHERE cod_estudiante='$cod_estudiante'";
+    include("conexion.php");
+
+    $conn = conectar();
+
+    $id = $_POST['id'];
+    $nombre = $_POST['nombre'];
+
+    $sql = "UPDATE usuarios SET nombre='$nombre' WHERE id='$id'";
     $query = mysqli_query($conn, $sql);
+
     if($query) {
-        Header("Location: index.php");
+        $_SESSION['admin'] = $nombre;
+        Header("Location: /indexLogin.php");
     } else {
         echo $query;
     }

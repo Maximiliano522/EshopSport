@@ -258,6 +258,12 @@ nav {
     color: black;
 }
 
+.Usuario {
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+}
+
 .payment {
     width: 500px;
     height: 500px;

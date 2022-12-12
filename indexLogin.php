@@ -1,3 +1,18 @@
+<?php
+
+    session_start();
+
+    $Usuario = $_SESSION['admin'];
+    
+    include("./PHP/conexion.php");
+
+    $conn = conectar();
+    $sql = "SELECT * FROM usuarios";
+    $query = mysqli_query($conn, $sql);
+    //echo $query;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,20 +79,44 @@
                     </div>
                 </div>
                     <div class="sliderItem">
-                        <img src="./img/Niños.png" alt="" class="sliderImg">
-                        <div class="sliderBg">
-                            <a href="/Niños.html">
-                                <button class="buyButton">Ver productos</button>
-                            </a>
-                        </div>
+                        <img src="./img/Usuario.png" alt="" class="Usuario">
+                        <table class="table">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Nombre (s)</th>
+                                <th></th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                $row=mysqli_fetch_assoc($query)
+                            ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $Usuario ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $row['apellidos'] ?>
+                                    </td>
+                                    <td>
+                                        <a href="actualizar.php?id=<?php echo $row['cod_estudiante']?>" 
+                                            class="btn">Editar</a>
+                                    </td>
+                                </tr>
+                            <?php
+                            ?>
+                        </tbody>
+                    </table>
+
                     </div>
                         <div class="sliderItem">
-                            <img src="./img/Niños.png" alt="" class="sliderImg">
-                            <div class="sliderBg">
-                                <a href="/Niños.html">
-                                    <button class="buyButton">Ver productos</button>
-                                </a>
-                            </div>
+                            <?php echo $login_usuario ?>
+                                
+                            <a href="actualizar.php?id=<?php echo $row['cod_estudiante']?>" 
+                                            class="btn">Editar</a>
                         </div>
                     </div>
                 </div>

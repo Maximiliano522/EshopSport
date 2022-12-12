@@ -29,7 +29,7 @@
             // Destruir las variables de conexion
             $sentencia_agregar = null;
             $pdo = null;
-            header('location: /indexLogin.html');
+            header('location: /indexLogin.php');
     
         }else{
             echo 'Las contraseñas no son iguales';

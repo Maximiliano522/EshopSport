@@ -1,5 +1,8 @@
 <?php
 
+    session_start();
+
+
     include_once 'conexionU.php';
 
     //echo 'Funcionando';
@@ -24,3 +27,4 @@
         echo 'Contraseña Incorrecta';
         header('Location: registro.php');
     } 
+?>

@@ -1,3 +1,15 @@
+
+<?php
+
+    include("./PHP/conexion.php");
+
+    $conn = conectar();
+    $sql = "SELECT * FROM usuarios";
+    $query = mysqli_query($conn, $sql);
+    //echo $query;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +30,7 @@
     <div class="left-side">
         <div class="hogar">
             <button class="casa-btn">
-                <a href="index.html" class = "casa">
+                <a href="indexLogin.php" class = "casa">
                     <img class="casa-btn.img" src="./img/Casa.png">
                 </a>
             </button>
@@ -46,20 +58,44 @@
                 <p class="product-des">
                     Los grandes diseñadores de moda de Nueva York, París y Milán, traen lo nuevo a la industria de la ropa, con sus colecciones de colores vibrantes, outfits monocromáticos, y estampados.
                 </p>
-                <a href="/PHP/registro.php" target="_parent">
-                    <button class="productButton2">Compra Ahora</button>
-                </a>
-        
+                <button class="productButton2">Compra Ahora</button>
                 <button class="nxt-btn">
                     
                     <img src="./img/arrow.png" alt="" class="nxt-btn-img">
                 </button>
+                <div class="Price" style="display:none">99</div>
+                <form action="./PHP/insertarMujer.php" method="post">
+                    <button class="productButton3" type="submit" value="Insertar">Agregar al carrito</button>
+                </form>
+            </div>
+            <div class="payment2">
+                <h1 class="payTitle">Personal Information</h1>
+                <label>Name and Surname</label>
+                <input type="text" placeholder="John Doe" class="payInput">
+                <label>Phone Number</label>
+                <input type="text" placeholder="+1 234 5678" class="payInput">
+                <label>Address</label>
+                <input type="text" placeholder="Elton St 21 22-145" class="payInput">
+                <h1 class="payTitle">Card Information</h1>
+                <div class="cardIcons">
+                    <img src="./img/visa.png" alt="" class="cardIcon">
+                    <img src="./img/master.png" alt="" class="cardIcon">
+                </div>
+                <input type="password" class="payInput" name="" id="" placeholder="Card Number">
+                <div class="cardInfo">
+                    <input type="text" placeholder="mm" class="payInput sm">
+                    <input type="text" placeholder="yyyy" class="payInput sm">
+                    <input type="text" placeholder="cvv" class="payInput sm">
+                </div>
+                <button class="payButton">Cheackout!!!</button>
+                <span class="close">X</span>
             </div>
             <div class="product-img-container">
                 <img src="./img/img1.jpg" id="img1" alt="" class="product-img">
             </div>
         </div>
     </div>
+    
     
     
     <script src="./JS/appMujeres.js"></script>

@@ -1,6 +1,7 @@
 <?php
 
     include("conexion.php");
+    
     $conn = conectar();
     $id = $_GET['id'];
     $sql = "DELETE FROM carrito WHERE idp='$id'";

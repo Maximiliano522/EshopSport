@@ -39,6 +39,22 @@ body {
     color: black;
 }
 
+.productButton3 {
+    position: relative;
+    float: left;
+    left: 10%;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.productButton3:hover {
+    background-color: white;
+    color: green;
+}
+
 .payment2 {
     width: 500px;
     height: 500px;

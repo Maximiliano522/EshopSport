@@ -1,11 +1,10 @@
 const productData = [
     {
         index: '01',
-        name: 'Blue york',  
-        image: './img/img1.jpg', 
-        des: 'Los grandes diseñadores de moda de Nueva York, París y Milán, traen lo nuevo a la industria de la ropa, con sus colecciones de colores vibrantes, outfits monocromáticos, y estampados.', 
-        desLeft: 'Gran y nuevo diseño de los diseñadores de la marca Nueva York',
-        price: '49$',
+        name: 'Run Red',  
+        image: './img/imgH1.png', 
+        des: 'Sientete libre y como a la hora de entrenar con esta increible blusa roja.', 
+        desLeft: 'Gran y nuevo diseño de los diseñadores de la marca Nueva Shein',
     },
     {
         index: '02',
@@ -13,7 +12,6 @@ const productData = [
         image: './img/img2.jpg', 
         des: 'Alerta peligro. Y, sobre todo, es el color de la consciencia. La mujer que elige llevar un vestido rojo hace una afirmación imponente: sabe quién es y sabe perfectamente cuál es su lugar.', 
         desLeft: 'Gran y nuevo diseño de los diseñadores de la marca New Mod',
-        price: '10',
     },
     {
         index: '03',
@@ -21,17 +19,14 @@ const productData = [
         image: './img/img3.jpg', 
         des: '¿Qué significa el vestido color Verde: frescura, libertad, sanación, esperanza, bienestar y serenidad todo lo positivo se asocia al verde al igual que la felicidad. Con el color verde se avanza, se progresa y se logra ser más positivo',
         desLeft: 'Gran y nuevo diseño de los diseñadores de la marca Shein', 
-        price:'20',
     }
 ]
 
 const nxtBtn = document.querySelector('.nxt-btn')
-const carrito = document.querySelector('.productButton3')
 let smImgContainer = document.querySelector('.sm-product-img-container')
 let smImg = document.querySelector('.sm-product-img')
 let productIndex = document.querySelector('.product-index')
 let smProductDes = document.querySelector('.sm-product-des')
-let smPrice = document.querySelector('.Price')
 
 let productImgContainer = document.querySelector('.product-img-container')
 let productImg = document.querySelector('.product-img')
@@ -56,12 +51,6 @@ nxtBtn.addEventListener('click', () => {
     smImg.src= productData[currentProduct].image;
     backdropImg.src= productData[currentProduct].image;
     productImg.src= productData[currentProduct].image;
-})
-
-carrito.addEventListener('click', () => {
-    productIndex.innerHTML = productData[currentProduct].index
-    productName.innerHTML = productData[currentProduct].name
-    smPrice.innerHTML = productData[currentProduct].price
 })
 
 const productButton = document.querySelector(".productButton2")

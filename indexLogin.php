@@ -41,7 +41,7 @@
             </div>
             
             <div class="navItem">
-                <a href="/index.php">
+                <a href="/PHP/Limpiar.php">
                     <span class="Login">Salir</span>
                 </a>
             </div>
@@ -59,7 +59,7 @@
             <div class="sliderItem">
                 <img src="./img/Mujeres.png" alt="" class="sliderImg">
                 <div class="sliderBg">
-                    <a href="/Mujeres.html">
+                    <a href="/MujeresLogin.php">
                         <button class="buyButton">Ver productos</button>
                     </a>
                 </div>
@@ -67,7 +67,7 @@
             <div class="sliderItem">
                 <img src="./img/Hombres.png" alt="" class="sliderImg">
                 <div class="sliderBg">
-                    <a href="/Hombres.html">
+                    <a href="/HombresLogin.php">
                         <button class="buyButton" id="buyHombres">Ver productos</button>
                     </a>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="sliderItem">
                     <img src="./img/Niños.png" alt="" class="sliderImg">
                     <div class="sliderBg">
-                        <a href="/Niños.html">
+                        <a href="/NiñosLogin.php">
                             <button class="buyButton">Ver productos</button>
                         </a>
                     </div>
@@ -105,45 +105,45 @@
                             <?php
                             ?>
                         </tbody>
-                    </table>
-
-                    </div>
-                        <div class="sliderItem">
-                            <table class="table">
+                            </table>
+                                </div>
+                    <div class="sliderItem">
+                    
+                        <button class="buyButton2">Comprar</button>
+                        
+                        <table class="table" style="border-spacing: 30px;">
                                 <thead class="table-success table-striped">
                                     <tr>
-                                        <th>Número</th>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                        <th>
-                                            Acciones
-                                        </th>
+                                        <th style="font-size: x-large; display: none;">Num art</th>
+                                        <th style="font-size: x-large">Nombre del artículo</th>
+                                        <th style="font-size: x-large">Precio</th>
+                                        <th style="font-size: x-large">Acciones</th>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                        while($row=mysqli_fetch_array($query2)){
-                                    ?>
-                                        <tr>
-                                            <td>
-                                                <?php echo $row['idp'] ?>
-                                            </td>
-                                            <td>
-                                                <?php echo $row['Name'] ?>
-                                            </td>
-                                            <td>
-                                                <?php echo $row['Price'], '$' ?>
-                                            </td>
-                                            <td>
-                                                <a href="/PHP/delete.php?id=<?php echo $row['idp']?>" 
-                                                    class="btn btn-danger">Borrar</a>
-                                            </td>
-                                        </tr>
-                                    <?php
-                                        }
-                                    ?>
-                                </tbody>
-                    </table>
+                                        </thead>
+                                        <tbody style="text-align: center;">
+                                                <?php
+                                                    while($row=mysqli_fetch_array($query2)){
+                                                ?>
+                                                    <tr>
+                                                        <td style="display: none;">
+                                                            <?php echo $row['idp'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $row['Name'] ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $row['Price'], '$' ?>
+                                                        </td>
+                                                        <td>
+                                                            <a href="/PHP/delete.php?id=<?php echo $row['idp']?>" 
+                                                                class="btn">Borrar</a>
+                                                        </td>
+                                                    </tr>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -190,7 +190,7 @@
             </div>
             <div class="sizes">
             </div>
-            <button class="productButton">BUY NOW!!!</button>
+            <button class="productButton" id="btn-buy">BUY NOW!!!</button>
         </div>
         <div class="payment">
             <h1 class="payTitle">Personal Information</h1>

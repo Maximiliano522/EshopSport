@@ -108,8 +108,6 @@
                             </table>
                                 </div>
                     <div class="sliderItem">
-                    
-                        <button class="buyButton2">Comprar</button>
                         
                         <table class="table" style="border-spacing: 30px;">
                                 <thead class="table-success table-striped">
@@ -145,7 +143,24 @@
                                             </tbody>
                             </table>
                         </div>
+                        
                     </div>
+                    <div class="sliderItem">
+                                <div id="contenedor">
+                                    <div id="caja1">
+                                        <h1 id="temperatura-valor"></h1>
+                                        <h1 id="temperatura-descripcion"></h1>
+                                    </div>
+                                    <div id="caja2">
+                                        <h2 id="ubicacion"></h2>
+                                        <img id="icono-animado" src="" alt="" height="128" width="128">
+                                    </div>
+                                    <div id="caja3">
+                                        <h3>Veloc. del Viento</h3>
+                                        <h1 id="viento-velocidad"></h1>
+                                    </div>
+                                </div>
+                            </div>
                 </div>
     </div>
     <div class="features">
@@ -307,5 +322,6 @@
         </div>
     </footer>
     <script src="/JS/app.js"></script>
+    <script src="/JS/appClima.js"></script>
 </body>
 </html>

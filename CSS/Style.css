@@ -62,7 +62,6 @@ nav {
 
 .slider {
     background: url("/img/Fondo.png");
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     overflow: hidden;
 }
 
@@ -303,7 +302,7 @@ nav {
     background-color: white;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -503,8 +502,69 @@ footer {
     text-align: center;
 }
 
+
 #buyHombres{
     right: -45%;
+}
+
+.containerR {
+    width: 500px;
+    height: 730px;
+    background-color: white;
+    position: relative;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 10px 50px;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.3);
+}
+
+.Fondo {
+    background: url("/img/Fondo.jpg");
+    height: 1800px;
+}
+
+.w3-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+#contenedor {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#caja1, #caja2, #caja3 {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20%;
+    width: 200px;
+    height: 200px;
+}
+
+#caja1 {
+    background-color: rgba(0,0,0,0.767);
+    color:azure;    
+}
+#caja2 {
+    background-color: darkslateblue;
+    color:azure;    
+}
+#caja3 {
+    background-color: #2ab2ea;
+    color:azure;    
 }
 
 @media screen and (max-width: 480px){

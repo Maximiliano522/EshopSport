@@ -8,16 +8,16 @@ const productData = [
     },
     {
         index: '02',
-        name: 'Red outfit',  
-        image: './img/img2.jpg', 
-        des: 'Alerta peligro. Y, sobre todo, es el color de la consciencia. La mujer que elige llevar un vestido rojo hace una afirmación imponente: sabe quién es y sabe perfectamente cuál es su lugar.', 
+        name: 'Fight outfit',  
+        image: './img/imgH2.png', 
+        des: 'Increible blusa lista para la pelea de todos los dias.', 
         desLeft: 'Gran y nuevo diseño de los diseñadores de la marca New Mod',
     },
     {
         index: '03',
-        name: 'Green Mood',  
-        image: './img/img3.jpg', 
-        des: '¿Qué significa el vestido color Verde: frescura, libertad, sanación, esperanza, bienestar y serenidad todo lo positivo se asocia al verde al igual que la felicidad. Con el color verde se avanza, se progresa y se logra ser más positivo',
+        name: 'Green Mood Man',  
+        image: './img/imgH3.png', 
+        des: 'Increible diseño para este verano inolvidable desde la mano de la mnarca siempre inovadora NASA',
         desLeft: 'Gran y nuevo diseño de los diseñadores de la marca Shein', 
     }
 ]

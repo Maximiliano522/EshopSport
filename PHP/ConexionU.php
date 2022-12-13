@@ -1,5 +1,5 @@
 <?php 
-    $link = 'mysql:host=localhost:8889; dbname=eshop';
+    $link = 'mysql:host=localhost:8889; dbname=eshopsport';
     $usuario = 'root';
     $pass = 'root';
 

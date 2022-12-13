@@ -48,8 +48,12 @@
                 <button class="productButton2">Compra Ahora</button>
                 <button class="nxt-btn">
                     
-                    <img src="./img/arrow.png" alt="" class="nxt-btn-img">
+                <img src="./img/arrow.png" alt="" class="nxt-btn-img">
                 </button>
+                <div class="Price" style="display:none">99</div>
+                <form action="./PHP/insertarHombre.php" method="post">
+                    <button class="productButton3" type="submit" value="Insertar">Agregar al carrito</button>
+                </form>
             </div>
             <div class="payment2">
                 <h1 class="payTitle">Personal Information</h1>
@@ -78,6 +82,7 @@
             </div>
         </div>
     </div>
+    
     
     
     <script src="./JS/appHombres.js"></script>
